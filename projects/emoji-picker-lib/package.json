@@ -20,9 +20,9 @@
         "./lib/localization/locales/**/*.json": "./lib/localization/locales/**/*.json"
     },
     "peerDependencies": {
-        "@angular/cdk": "^21.2.5",
-        "@angular/common": "^21.2.7",
-        "@angular/core": "^21.2.7"
+        "@angular/cdk": "^21.0.0",
+        "@angular/common": "^21.0.0",
+        "@angular/core": "^21.0.0"
     },
     "dependencies": {
         "tslib": "^2.3.0"
