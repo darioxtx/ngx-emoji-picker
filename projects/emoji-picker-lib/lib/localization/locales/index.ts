@@ -1,112 +1,114 @@
-import arTranslations from './ar.json';
-import caTranslations from './ca.json';
-import csTranslations from './cs.json';
-import deTranslations from './de.json';
-import elTranslations from './el.json';
-import enTranslations from './en.json';
-import esTranslations from './es.json';
-import faTranslations from './fa.json';
-import fiTranslations from './fi.json';
-import frTranslations from './fr.json';
-import huTranslations from './hu.json';
-import itTranslations from './it.json';
-import jaTranslations from './ja.json';
-import ltTranslations from './lt.json';
-import lvTranslations from './lv.json';
-import nbTranslations from './nb.json';
-import nlTranslations from './nl.json';
-import plTranslations from './pl.json';
-import ptTranslations from './pt.json';
-import roTranslations from './ro.json';
-import ruTranslations from './ru.json';
-import slTranslations from './sl.json';
-import svTranslations from './sv.json';
-import trTranslations from './tr.json';
-import viTranslations from './vi.json';
-import zhTwTranslations from './zh-tw.json';
-import zhTranslations from './zh.json';
+import arTranslationsJson from './ar.json';
+import caTranslationsJson from './ca.json';
+import csTranslationsJson from './cs.json';
+import deTranslationsJson from './de.json';
+import elTranslationsJson from './el.json';
+import enTranslationsJson from './en.json';
+import esTranslationsJson from './es.json';
+import faTranslationsJson from './fa.json';
+import fiTranslationsJson from './fi.json';
+import frTranslationsJson from './fr.json';
+import huTranslationsJson from './hu.json';
+import itTranslationsJson from './it.json';
+import jaTranslationsJson from './ja.json';
+import ltTranslationsJson from './lt.json';
+import lvTranslationsJson from './lv.json';
+import nbTranslationsJson from './nb.json';
+import nlTranslationsJson from './nl.json';
+import plTranslationsJson from './pl.json';
+import ptTranslationsJson from './pt.json';
+import roTranslationsJson from './ro.json';
+import ruTranslationsJson from './ru.json';
+import slTranslationsJson from './sl.json';
+import svTranslationsJson from './sv.json';
+import trTranslationsJson from './tr.json';
+import viTranslationsJson from './vi.json';
+import zhTwTranslationsJson from './zh-tw.json';
+import zhTranslationsJson from './zh.json';
 
-import arEmojiKeywordTranslations from './ar-emoji-keywords.json';
-import caEmojiKeywordTranslations from './ca-emoji-keywords.json';
-import csEmojiKeywordTranslations from './cs-emoji-keywords.json';
-import deEmojiKeywordTranslations from './de-emoji-keywords.json';
-import elEmojiKeywordTranslations from './el-emoji-keywords.json';
-import enEmojiKeywordTranslations from './en-emoji-keywords.json';
-import esEmojiKeywordTranslations from './es-emoji-keywords.json';
-import faEmojiKeywordTranslations from './fa-emoji-keywords.json';
-import fiEmojiKeywordTranslations from './fi-emoji-keywords.json';
-import frEmojiKeywordTranslations from './fr-emoji-keywords.json';
-import huEmojiKeywordTranslations from './hu-emoji-keywords.json';
-import itEmojiKeywordTranslations from './it-emoji-keywords.json';
-import jaEmojiKeywordTranslations from './ja-emoji-keywords.json';
-import ltEmojiKeywordTranslations from './lt-emoji-keywords.json';
-import lvEmojiKeywordTranslations from './lv-emoji-keywords.json';
-import nbEmojiKeywordTranslations from './nb-emoji-keywords.json';
-import nlEmojiKeywordTranslations from './nl-emoji-keywords.json';
-import plEmojiKeywordTranslations from './pl-emoji-keywords.json';
-import ptEmojiKeywordTranslations from './pt-emoji-keywords.json';
-import roEmojiKeywordTranslations from './ro-emoji-keywords.json';
-import ruEmojiKeywordTranslations from './ru-emoji-keywords.json';
-import slEmojiKeywordTranslations from './sl-emoji-keywords.json';
-import svEmojiKeywordTranslations from './sv-emoji-keywords.json';
-import trEmojiKeywordTranslations from './tr-emoji-keywords.json';
-import viEmojiKeywordTranslations from './vi-emoji-keywords.json';
-import zhEmojiKeywordTranslations from './zh-emoji-keywords.json';
-import zhTwEmojiKeywordTranslations from './zh-tw-emoji-keywords.json';
+import arEmojiKeywordTranslationsJson from './ar-emoji-keywords.json';
+import caEmojiKeywordTranslationsJson from './ca-emoji-keywords.json';
+import csEmojiKeywordTranslationsJson from './cs-emoji-keywords.json';
+import deEmojiKeywordTranslationsJson from './de-emoji-keywords.json';
+import elEmojiKeywordTranslationsJson from './el-emoji-keywords.json';
+import enEmojiKeywordTranslationsJson from './en-emoji-keywords.json';
+import esEmojiKeywordTranslationsJson from './es-emoji-keywords.json';
+import faEmojiKeywordTranslationsJson from './fa-emoji-keywords.json';
+import fiEmojiKeywordTranslationsJson from './fi-emoji-keywords.json';
+import frEmojiKeywordTranslationsJson from './fr-emoji-keywords.json';
+import huEmojiKeywordTranslationsJson from './hu-emoji-keywords.json';
+import itEmojiKeywordTranslationsJson from './it-emoji-keywords.json';
+import jaEmojiKeywordTranslationsJson from './ja-emoji-keywords.json';
+import ltEmojiKeywordTranslationsJson from './lt-emoji-keywords.json';
+import lvEmojiKeywordTranslationsJson from './lv-emoji-keywords.json';
+import nbEmojiKeywordTranslationsJson from './nb-emoji-keywords.json';
+import nlEmojiKeywordTranslationsJson from './nl-emoji-keywords.json';
+import plEmojiKeywordTranslationsJson from './pl-emoji-keywords.json';
+import ptEmojiKeywordTranslationsJson from './pt-emoji-keywords.json';
+import roEmojiKeywordTranslationsJson from './ro-emoji-keywords.json';
+import ruEmojiKeywordTranslationsJson from './ru-emoji-keywords.json';
+import slEmojiKeywordTranslationsJson from './sl-emoji-keywords.json';
+import svEmojiKeywordTranslationsJson from './sv-emoji-keywords.json';
+import trEmojiKeywordTranslationsJson from './tr-emoji-keywords.json';
+import viEmojiKeywordTranslationsJson from './vi-emoji-keywords.json';
+import zhEmojiKeywordTranslationsJson from './zh-emoji-keywords.json';
+import zhTwEmojiKeywordTranslationsJson from './zh-tw-emoji-keywords.json';
 
-export {
-    arEmojiKeywordTranslations,
-    arTranslations,
-    caEmojiKeywordTranslations,
-    caTranslations,
-    csEmojiKeywordTranslations,
-    csTranslations,
-    deEmojiKeywordTranslations,
-    deTranslations,
-    elEmojiKeywordTranslations,
-    elTranslations,
-    enEmojiKeywordTranslations,
-    enTranslations,
-    esEmojiKeywordTranslations,
-    esTranslations,
-    faEmojiKeywordTranslations,
-    faTranslations,
-    fiEmojiKeywordTranslations,
-    fiTranslations,
-    frEmojiKeywordTranslations,
-    frTranslations,
-    huEmojiKeywordTranslations,
-    huTranslations,
-    itEmojiKeywordTranslations,
-    itTranslations,
-    jaEmojiKeywordTranslations,
-    jaTranslations,
-    ltEmojiKeywordTranslations,
-    ltTranslations,
-    lvEmojiKeywordTranslations,
-    lvTranslations,
-    nbEmojiKeywordTranslations,
-    nbTranslations,
-    nlEmojiKeywordTranslations,
-    nlTranslations,
-    plEmojiKeywordTranslations,
-    plTranslations,
-    ptEmojiKeywordTranslations,
-    ptTranslations,
-    roEmojiKeywordTranslations,
-    roTranslations,
-    ruEmojiKeywordTranslations,
-    ruTranslations,
-    slEmojiKeywordTranslations,
-    slTranslations,
-    svEmojiKeywordTranslations,
-    svTranslations,
-    trEmojiKeywordTranslations,
-    trTranslations,
-    viEmojiKeywordTranslations,
-    viTranslations,
-    zhEmojiKeywordTranslations,
-    zhTranslations,
-    zhTwEmojiKeywordTranslations,
-    zhTwTranslations
-};
+type TranslationsJson = Record<string, string>;
+type EmojiKeywordTranslationsJson = Record<string, string[]>;
+
+export const arTranslations: TranslationsJson = arTranslationsJson;
+export const caTranslations: TranslationsJson = caTranslationsJson;
+export const csTranslations: TranslationsJson = csTranslationsJson;
+export const deTranslations: TranslationsJson = deTranslationsJson;
+export const elTranslations: TranslationsJson = elTranslationsJson;
+export const enTranslations: TranslationsJson = enTranslationsJson;
+export const esTranslations: TranslationsJson = esTranslationsJson;
+export const faTranslations: TranslationsJson = faTranslationsJson;
+export const fiTranslations: TranslationsJson = fiTranslationsJson;
+export const frTranslations: TranslationsJson = frTranslationsJson;
+export const huTranslations: TranslationsJson = huTranslationsJson;
+export const itTranslations: TranslationsJson = itTranslationsJson;
+export const jaTranslations: TranslationsJson = jaTranslationsJson;
+export const ltTranslations: TranslationsJson = ltTranslationsJson;
+export const lvTranslations: TranslationsJson = lvTranslationsJson;
+export const nbTranslations: TranslationsJson = nbTranslationsJson;
+export const nlTranslations: TranslationsJson = nlTranslationsJson;
+export const plTranslations: TranslationsJson = plTranslationsJson;
+export const ptTranslations: TranslationsJson = ptTranslationsJson;
+export const roTranslations: TranslationsJson = roTranslationsJson;
+export const ruTranslations: TranslationsJson = ruTranslationsJson;
+export const slTranslations: TranslationsJson = slTranslationsJson;
+export const svTranslations: TranslationsJson = svTranslationsJson;
+export const trTranslations: TranslationsJson = trTranslationsJson;
+export const viTranslations: TranslationsJson = viTranslationsJson;
+export const zhTwTranslations: TranslationsJson = zhTwTranslationsJson;
+export const zhTranslations: TranslationsJson = zhTranslationsJson;
+
+export const arEmojiKeywordTranslations: EmojiKeywordTranslationsJson = arEmojiKeywordTranslationsJson;
+export const caEmojiKeywordTranslations: EmojiKeywordTranslationsJson = caEmojiKeywordTranslationsJson;
+export const csEmojiKeywordTranslations: EmojiKeywordTranslationsJson = csEmojiKeywordTranslationsJson;
+export const deEmojiKeywordTranslations: EmojiKeywordTranslationsJson = deEmojiKeywordTranslationsJson;
+export const elEmojiKeywordTranslations: EmojiKeywordTranslationsJson = elEmojiKeywordTranslationsJson;
+export const enEmojiKeywordTranslations: EmojiKeywordTranslationsJson = enEmojiKeywordTranslationsJson;
+export const esEmojiKeywordTranslations: EmojiKeywordTranslationsJson = esEmojiKeywordTranslationsJson;
+export const faEmojiKeywordTranslations: EmojiKeywordTranslationsJson = faEmojiKeywordTranslationsJson;
+export const fiEmojiKeywordTranslations: EmojiKeywordTranslationsJson = fiEmojiKeywordTranslationsJson;
+export const frEmojiKeywordTranslations: EmojiKeywordTranslationsJson = frEmojiKeywordTranslationsJson;
+export const huEmojiKeywordTranslations: EmojiKeywordTranslationsJson = huEmojiKeywordTranslationsJson;
+export const itEmojiKeywordTranslations: EmojiKeywordTranslationsJson = itEmojiKeywordTranslationsJson;
+export const jaEmojiKeywordTranslations: EmojiKeywordTranslationsJson = jaEmojiKeywordTranslationsJson;
+export const ltEmojiKeywordTranslations: EmojiKeywordTranslationsJson = ltEmojiKeywordTranslationsJson;
+export const lvEmojiKeywordTranslations: EmojiKeywordTranslationsJson = lvEmojiKeywordTranslationsJson;
+export const nbEmojiKeywordTranslations: EmojiKeywordTranslationsJson = nbEmojiKeywordTranslationsJson;
+export const nlEmojiKeywordTranslations: EmojiKeywordTranslationsJson = nlEmojiKeywordTranslationsJson;
+export const plEmojiKeywordTranslations: EmojiKeywordTranslationsJson = plEmojiKeywordTranslationsJson;
+export const ptEmojiKeywordTranslations: EmojiKeywordTranslationsJson = ptEmojiKeywordTranslationsJson;
+export const roEmojiKeywordTranslations: EmojiKeywordTranslationsJson = roEmojiKeywordTranslationsJson;
+export const ruEmojiKeywordTranslations: EmojiKeywordTranslationsJson = ruEmojiKeywordTranslationsJson;
+export const slEmojiKeywordTranslations: EmojiKeywordTranslationsJson = slEmojiKeywordTranslationsJson;
+export const svEmojiKeywordTranslations: EmojiKeywordTranslationsJson = svEmojiKeywordTranslationsJson;
+export const trEmojiKeywordTranslations: EmojiKeywordTranslationsJson = trEmojiKeywordTranslationsJson;
+export const viEmojiKeywordTranslations: EmojiKeywordTranslationsJson = viEmojiKeywordTranslationsJson;
+export const zhEmojiKeywordTranslations: EmojiKeywordTranslationsJson = zhEmojiKeywordTranslationsJson;
+export const zhTwEmojiKeywordTranslations: EmojiKeywordTranslationsJson = zhTwEmojiKeywordTranslationsJson;
