@@ -50,17 +50,21 @@ jobs:
       - run: npm ci
       - run: npm run build-prod
       - name: Create npm package tarball
-        run: npm pack
+        id: pack
+        working-directory: dist/ngx-emoji-picker
+        run: |
+          FILE=$(npm pack)
+
+          echo "file=$FILE" >> "$GITHUB_OUTPUT"
+          echo "path=dist/ngx-emoji-picker/$FILE" >> "$GITHUB_OUTPUT"
       - name: Resolve package metadata
         id: pkg
         run: |
-          NAME=$(node -p "require('./package.json').name")
-          VERSION=$(node -p "require('./package.json').version")
-          FILE=$(ls *.tgz | head -n 1)
+          NAME=$(node -p "require('./dist/ngx-emoji-picker/package.json').name")
+          VERSION=$(node -p "require('./dist/ngx-emoji-picker/package.json').version")
 
           echo "name=$NAME" >> "$GITHUB_OUTPUT"
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
-          echo "file=$FILE" >> "$GITHUB_OUTPUT"
 
       - name: Create GitHub Release and upload tarball
         env:
@@ -69,6 +73,6 @@ jobs:
           TAG="${GITHUB_REF_NAME}"
 
           gh release create "$TAG" \
-            "${{ steps.pkg.outputs.file }}" \
-            --title "${{ steps.pkg.outputs.name }} $TAG" \
+            "${{ steps.pack.outputs.path }}" \
+            --title "${{ steps.pkg.outputs.name }} ${{ steps.pkg.outputs.version }}" \
             --generate-notes
