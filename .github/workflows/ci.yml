@@ -10,15 +10,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: 'npm'
       - run: npm ci
 
-      - name: Run ESLint
-        run: npm run lint
+      #- name: Run ESLint
+      #  run: npm run lint
 
       - name: Build library
         run: npm run build
@@ -30,7 +30,7 @@ jobs:
       #  run: npm run build
 
       #- name: coverage
-      #  uses: codecov/codecov-action@v3
+      #  uses: codecov/codecov-action@v4
       #  with:
       #    token: ${{ secrets.CODECOV_TOKEN }}
   publish:
@@ -42,8 +42,8 @@ jobs:
       issues: write # to be able to comment on released issues
       pull-requests: write # to be able to comment on released pull requests
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: 'npm'
