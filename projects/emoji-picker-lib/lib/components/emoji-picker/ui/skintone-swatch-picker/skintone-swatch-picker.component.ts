@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { ChangeDetectionStrategy, Component, computed, HostBinding, Input, model, output, signal } from '@angular/core';
 import { Skintone, SkintoneColor, skintoneColors } from '../../models';
 
@@ -9,7 +9,7 @@ import { Skintone, SkintoneColor, skintoneColors } from '../../models';
 @Component({
     selector: 'ch-skintone-swatch-picker',
     changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [CommonModule],
+    imports: [],
     templateUrl: './skintone-swatch-picker.component.html',
     styleUrl: './skintone-swatch-picker.component.scss',
     host: {

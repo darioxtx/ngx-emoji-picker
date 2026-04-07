@@ -1,12 +1,12 @@
 import { ConnectedPosition } from '@angular/cdk/overlay';
-import { CommonModule } from '@angular/common';
+
 import { Component, signal } from '@angular/core';
 import { ButtonComponent } from '@chit-chat/ngx-emoji-picker/lib/components/button';
 import { DialogComponent } from '@chit-chat/ngx-emoji-picker/lib/components/dialog';
 
 @Component({
     selector: 'ch-dialog-position',
-    imports: [CommonModule, DialogComponent, ButtonComponent],
+    imports: [DialogComponent, ButtonComponent],
     templateUrl: './dialog-position.component.html',
     styleUrls: ['./dialog-position.component.scss']
 })

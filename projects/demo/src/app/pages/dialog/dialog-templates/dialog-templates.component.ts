@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, signal } from '@angular/core';
 import { ButtonComponent, ButtonIconProps } from '@chit-chat/ngx-emoji-picker/lib/components/button';
 import { DialogComponent } from '@chit-chat/ngx-emoji-picker/lib/components/dialog';
@@ -6,7 +6,7 @@ import { TextBoxComponent } from '@chit-chat/ngx-emoji-picker/lib/components/tex
 
 @Component({
     selector: 'ch-dialog-templates',
-    imports: [CommonModule, DialogComponent, ButtonComponent, TextBoxComponent],
+    imports: [DialogComponent, ButtonComponent, TextBoxComponent],
     templateUrl: './dialog-templates.component.html',
     styleUrl: './dialog-templates.component.scss'
 })

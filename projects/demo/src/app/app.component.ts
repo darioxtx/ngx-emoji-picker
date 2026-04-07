@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, inject } from '@angular/core';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -9,7 +9,7 @@ import { TranslationService } from '@chit-chat/ngx-emoji-picker/lib/localization
 
 @Component({
     selector: 'ch-root',
-    imports: [RouterOutlet, CommonModule, MatSidenavModule, MatListModule, MatToolbarModule, MatSlideToggleModule],
+    imports: [RouterOutlet, MatSidenavModule, MatListModule, MatToolbarModule, MatSlideToggleModule],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss'
 })

@@ -1,27 +1,38 @@
 {
     "extends": "../../tsconfig.json",
     "compilerOptions": {
-        "outDir": "../../dist/out-tsc/lib",
-        "declaration": true,
-        "declarationMap": true,
-        "inlineSources": true,
-        "sourceMap": true,
-        "types": [],
-        "baseUrl": "./",
-        "moduleResolution": "node",
-        "target": "es2022",
-        "module": "es2022",
-        "experimentalDecorators": true,
-        "importHelpers": true,
-        "stripInternal": true,
-        "emitDecoratorMetadata": false,
-        "lib": ["es2022", "dom"],
-        "paths": {
-            "@chit-chat/ngx-emoji-picker/lib/components/*": ["/lib/components/*"],
-            "@chit-chat/ngx-emoji-picker/lib/utils": ["/lib/utils"],
-            "@chit-chat/ngx-emoji-picker/lib/localization": ["/lib/localization"],
-            "@chit-chat/ngx-emoji-picker/lib/*": ["/lib/*"]
-        }
+      "outDir": "../../dist/out-tsc/lib",
+      "declaration": true,
+      "declarationMap": true,
+      "inlineSources": true,
+      "sourceMap": true,
+      "types": [],
+      "baseUrl": "./",
+      "moduleResolution": "bundler",
+      "target": "es2022",
+      "module": "es2022",
+      "experimentalDecorators": true,
+      "importHelpers": true,
+      "stripInternal": true,
+      "emitDecoratorMetadata": false,
+      "lib": [
+        "es2022",
+        "dom"
+      ],
+      "paths": {
+        "@chit-chat/ngx-emoji-picker/lib/components/*": [
+          "/lib/components/*"
+        ],
+        "@chit-chat/ngx-emoji-picker/lib/utils": [
+          "/lib/utils"
+        ],
+        "@chit-chat/ngx-emoji-picker/lib/localization": [
+          "/lib/localization"
+        ],
+        "@chit-chat/ngx-emoji-picker/lib/*": [
+          "/lib/*"
+        ]
+      }
     },
     "angularCompilerOptions": {
         "flatModuleId": "@chit-chat/ngx-emoji-picker",

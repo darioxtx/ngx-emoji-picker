@@ -1,5 +1,5 @@
-import { DOCUMENT } from '@angular/common';
-import { EnvironmentProviders, NgModule, inject, provideAppInitializer } from '@angular/core';
+
+import { EnvironmentProviders, NgModule, inject, provideAppInitializer, DOCUMENT } from '@angular/core';
 
 function initializeDocument(document: Document): () => void {
     return () => {

@@ -1,10 +1,10 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { ButtonComponent } from '@chit-chat/ngx-emoji-picker/lib/components/button';
 
 @Component({
     selector: 'ch-button-basic',
-    imports: [CommonModule, ButtonComponent],
+    imports: [ButtonComponent],
     templateUrl: './button-basic.component.html',
     styleUrl: './button-basic.component.scss'
 })

@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, signal } from '@angular/core';
 import { ButtonComponent } from '@chit-chat/ngx-emoji-picker/lib/components/button';
 import { IconComponent } from '@chit-chat/ngx-emoji-picker/lib/components/icon';
@@ -6,7 +6,7 @@ import { TextBoxComponent, TextBoxMode } from '@chit-chat/ngx-emoji-picker/lib/c
 
 @Component({
     selector: 'ch-text-box-custom-content',
-    imports: [CommonModule, TextBoxComponent, ButtonComponent, IconComponent],
+    imports: [TextBoxComponent, ButtonComponent, IconComponent],
     templateUrl: './text-box-custom-content.component.html',
     styleUrl: './text-box-custom-content.component.scss'
 })

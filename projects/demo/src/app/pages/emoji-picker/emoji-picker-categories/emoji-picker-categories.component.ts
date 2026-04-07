@@ -1,10 +1,10 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { EmojiCategory, EmojiPickerComponent } from '@chit-chat/ngx-emoji-picker/lib/components/emoji-picker';
 
 @Component({
     selector: 'ch-emoji-picker-categories',
-    imports: [CommonModule, EmojiPickerComponent],
+    imports: [EmojiPickerComponent],
     templateUrl: './emoji-picker-categories.component.html',
     styleUrl: './emoji-picker-categories.component.scss'
 })

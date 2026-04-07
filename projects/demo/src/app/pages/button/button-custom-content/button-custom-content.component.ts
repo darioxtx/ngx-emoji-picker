@@ -1,10 +1,10 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { ButtonComponent } from '@chit-chat/ngx-emoji-picker/lib/components/button';
 
 @Component({
     selector: 'ch-button-custom-content',
-    imports: [CommonModule, ButtonComponent],
+    imports: [ButtonComponent],
     templateUrl: './button-custom-content.component.html',
     styleUrl: './button-custom-content.component.scss'
 })

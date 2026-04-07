@@ -1,5 +1,5 @@
-import { DOCUMENT } from '@angular/common';
-import { AfterViewInit, Directive, ElementRef, Inject, input, OnDestroy, Renderer2 } from '@angular/core';
+
+import { AfterViewInit, Directive, ElementRef, Inject, input, OnDestroy, Renderer2, DOCUMENT } from '@angular/core';
 /**
  * A directive that adds a ripple effect to an element when it is clicked or tapped.
  * The ripple effect is a visual feedback indicating the point of interaction.

@@ -1,5 +1,5 @@
 import { ConnectedPosition, OverlayRef } from '@angular/cdk/overlay';
-import { CommonModule } from '@angular/common';
+
 import { Component, ElementRef, signal, viewChild } from '@angular/core';
 import { ButtonComponent } from '@chit-chat/ngx-emoji-picker/lib/components/button';
 import { DialogComponent } from '@chit-chat/ngx-emoji-picker/lib/components/dialog';
@@ -7,7 +7,7 @@ import { EmojiPickerComponent } from '@chit-chat/ngx-emoji-picker/lib/components
 
 @Component({
     selector: 'ch-dialog-basic',
-    imports: [CommonModule, DialogComponent, ButtonComponent, EmojiPickerComponent],
+    imports: [DialogComponent, ButtonComponent, EmojiPickerComponent],
     templateUrl: './dialog-basic.component.html',
     styleUrl: './dialog-basic.component.scss'
 })

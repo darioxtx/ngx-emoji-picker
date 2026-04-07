@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { ChangeDetectionStrategy, Component, HostBinding, inject, Input, model, output, Renderer2 } from '@angular/core';
 import { ClickEvent, ClickTouchHoldDirective, PreventContextMenuDirective } from '@chit-chat/ngx-emoji-picker/lib/utils';
 import { Emoji } from '../../models';
@@ -10,7 +10,7 @@ import { EmojiButtonComponent } from '../emoji-button/emoji-button.component';
  */
 @Component({
     selector: 'ch-emoji-skintone-picker',
-    imports: [CommonModule, EmojiButtonComponent, ClickTouchHoldDirective, PreventContextMenuDirective],
+    imports: [EmojiButtonComponent, ClickTouchHoldDirective, PreventContextMenuDirective],
     templateUrl: './emoji-skintone-picker.component.html',
     styleUrl: './emoji-skintone-picker.component.scss',
     hostDirectives: [PreventContextMenuDirective],

@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, computed, inject, signal, WritableSignal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { EmojiPickerComponent, EmojiSelectedEvent, EmojiSelectionSource, IndividualEmojiSkintone, Skintone, SkintoneSetting, StorageConfig } from '@chit-chat/ngx-emoji-picker/lib/components/emoji-picker';
@@ -6,7 +6,7 @@ import { CustomStorageService } from './custom-storage.service';
 
 @Component({
     selector: 'ch-emoji-picker-custom-storage',
-    imports: [CommonModule, EmojiPickerComponent, FormsModule],
+    imports: [EmojiPickerComponent, FormsModule],
     providers: [CustomStorageService],
     templateUrl: './emoji-picker-custom-storage.component.html',
     styleUrl: './emoji-picker-custom-storage.component.scss'

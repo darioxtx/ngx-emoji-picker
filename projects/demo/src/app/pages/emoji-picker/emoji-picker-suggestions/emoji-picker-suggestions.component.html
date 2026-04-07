@@ -1,19 +1,21 @@
 <div class="showcase-container row-showcase justify-center">
-    <div class="emoji-picker-container">
-        <ch-emoji-picker [width]="350" [height]="350" [suggestionOptions]="suggestionOptions()" [autofocus]="false"></ch-emoji-picker>
-    </div>
+  <div class="emoji-picker-container">
+    <ch-emoji-picker [width]="350" [height]="350" [suggestionOptions]="suggestionOptions()" [autofocus]="false"></ch-emoji-picker>
+  </div>
 
-    <div class="form">
-        <div class="form-item">
-            <label for="mode">Mode:</label>
+  <div class="form">
+    <div class="form-item">
+      <label for="mode">Mode:</label>
 
-            <select id="mode" [(ngModel)]="selectedSuggestionMode" class="select-box">
-                <option *ngFor="let mode of suggestionModes" [value]="mode">{{ mode | titlecase }}</option>
-            </select>
-        </div>
-        <div class="form-item">
-            <label for="limit-input">Limit:</label>
-            <input id="limit-input" type="number" [(ngModel)]="limit" placeholder="Limit" />
-        </div>
+      <select id="mode" [(ngModel)]="selectedSuggestionMode" class="select-box">
+        @for (mode of suggestionModes; track mode) {
+          <option [value]="mode">{{ mode | titlecase }}</option>
+        }
+      </select>
     </div>
+    <div class="form-item">
+      <label for="limit-input">Limit:</label>
+      <input id="limit-input" type="number" [(ngModel)]="limit" placeholder="Limit" />
+    </div>
+  </div>
 </div>
