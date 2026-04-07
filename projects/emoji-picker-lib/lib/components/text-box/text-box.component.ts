@@ -129,7 +129,7 @@ export class TextBoxComponent implements ControlValueAccessor, AfterViewInit, On
     private onChange: (value: string) => void = () => {};
     private onTouched: () => void = () => {};
 
-    @HostListener('blur', ['$event'])
+    @HostListener('blur')
     onBlur(): void {
         this.onTouched();
     }
