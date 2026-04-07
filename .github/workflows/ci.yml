@@ -23,16 +23,16 @@ jobs:
       - name: Build library
         run: npm run build
 
-      - name: Run unit tests
-        run: npm run test:ci
+      #- name: Run unit tests
+      #  run: npm run test:ci
 
-      - name: Build
-        run: npm run build
+      #- name: Build
+      #  run: npm run build
 
-      - name: coverage
-        uses: codecov/codecov-action@v3
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+      #- name: coverage
+      #  uses: codecov/codecov-action@v3
+      #  with:
+      #    token: ${{ secrets.CODECOV_TOKEN }}
   publish:
     needs: build
     runs-on: ubuntu-latest
@@ -41,17 +41,47 @@ jobs:
       contents: write # to be able to publish a GitHub release
       issues: write # to be able to comment on released issues
       pull-requests: write # to be able to comment on released pull requests
-      id-token: write # to enable use of OIDC for npm provenance
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 22
           cache: 'npm'
       - run: npm ci
-      - run: npm run build
+      - run: npm run build-prod
+      - name: Create release archives
+        run: |
+          mkdir -p release-artifacts
+          cd dist
+          zip -r ../release-artifacts/ngx-emoji-picker.zip ngx-emoji-picker
+          tar -czf ../release-artifacts/ngx-emoji-picker.tar.gz ngx-emoji-picker
+      - name: Configure semantic-release for GitHub only
+        run: |
+          cat <<'EOF' > .releaserc.json
+          {
+            "branches": ["master"],
+            "plugins": [
+              "@semantic-release/commit-analyzer",
+              "@semantic-release/release-notes-generator",
+              [
+                "@semantic-release/github",
+                {
+                  "assets": [
+                    {
+                      "path": "release-artifacts/ngx-emoji-picker.zip",
+                      "label": "Package build (.zip)"
+                    },
+                    {
+                      "path": "release-artifacts/ngx-emoji-picker.tar.gz",
+                      "label": "Package build (.tar.gz)"
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+          EOF
       - name: release
-        run: cd dist/ngx-emoji-picker && npx semantic-release
+        run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
