@@ -49,39 +49,26 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm run build-prod
-      - name: Create release archives
+      - name: Create npm package tarball
+        run: npm pack
+      - name: Resolve package metadata
+        id: pkg
         run: |
-          mkdir -p release-artifacts
-          cd dist
-          zip -r ../release-artifacts/ngx-emoji-picker.zip ngx-emoji-picker
-          tar -czf ../release-artifacts/ngx-emoji-picker.tar.gz ngx-emoji-picker
-      - name: Configure semantic-release for GitHub only
-        run: |
-          cat <<'EOF' > .releaserc.json
-          {
-            "branches": ["master"],
-            "plugins": [
-              "@semantic-release/commit-analyzer",
-              "@semantic-release/release-notes-generator",
-              [
-                "@semantic-release/github",
-                {
-                  "assets": [
-                    {
-                      "path": "release-artifacts/ngx-emoji-picker.zip",
-                      "label": "Package build (.zip)"
-                    },
-                    {
-                      "path": "release-artifacts/ngx-emoji-picker.tar.gz",
-                      "label": "Package build (.tar.gz)"
-                    }
-                  ]
-                }
-              ]
-            ]
-          }
-          EOF
-      - name: release
-        run: npx semantic-release
+          NAME=$(node -p "require('./package.json').name")
+          VERSION=$(node -p "require('./package.json').version")
+          FILE=$(ls *.tgz | head -n 1)
+
+          echo "name=$NAME" >> "$GITHUB_OUTPUT"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "file=$FILE" >> "$GITHUB_OUTPUT"
+
+      - name: Create GitHub Release and upload tarball
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="${GITHUB_REF_NAME}"
+
+          gh release create "$TAG" \
+            "${{ steps.pkg.outputs.file }}" \
+            --title "${{ steps.pkg.outputs.name }} $TAG" \
+            --generate-notes
